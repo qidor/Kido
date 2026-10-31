@@ -1,0 +1,30 @@
+#!name=美团去广告
+#!desc=去除美团 App 开屏、广告素材与广告/统计域名；规则摘自奶思 fmz200 去广告合集 2026-10-25 版，仅去广告，不动下单、支付与配送功能
+#!author=QiMonitor（规则来源：fmz200）
+#!category=去广告
+
+# 说明：
+# - 本模块只含美团 App 与美团外卖的规则，不含美团充电宝小程序、美团众包、小象超市等其他 App 的规则。
+# - 开屏与广告素材走 URL Rewrite（需 MITM），广告/统计域名走 Rule（免 MITM 即生效）。
+# - 如装上后美团打开异常，关掉本模块即恢复。
+
+[Rule]
+DOMAIN-SUFFIX,report.meituan.com,REJECT
+DOMAIN-SUFFIX,analytics.meituan.net,REJECT
+DOMAIN-SUFFIX,wmlog.meituan.com,REJECT
+DOMAIN-SUFFIX,ad.e.waimai.sankuai.com,REJECT
+DOMAIN-SUFFIX,mads.meituan.com,REJECT
+DOMAIN-SUFFIX,dreport.meituan.net,REJECT
+DOMAIN-SUFFIX,d.meituan.net,REJECT
+
+[URL Rewrite]
+^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject-img
+^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-img
+^https?:\/\/img\.meituan\.net\/goodsawardpic\/[a-f0-9]+\.png\.webp reject-img
+^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
+^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
+^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807& reject-dict
+
+[MITM]
+hostname = %APPEND% wmapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net
