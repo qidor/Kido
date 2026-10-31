@@ -1,0 +1,26 @@
+#!name=闲鱼开屏去广告
+#!desc=只拦闲鱼开屏广告；针对新版闲鱼开屏接口域名 acs.m.goofish.com，旧规则写 acs.m.taobao.com 会失效
+#!author=QiMonitor（规则来源：Thelongdarkorg）
+#!category=去广告
+
+# 说明：
+# - 本模块只做一件事：拦截闲鱼冷启动开屏广告，不改首页、搜索、同城、社区、我的、订单页。
+# - 关键在 host：新版闲鱼开屏主接口走 acs.m.goofish.com，旧规则写 acs.m.taobao.com 从未生效；
+#   另有每天 0 点后的开屏素材预取接口 splash.async.ads，一并拦掉，否则第二天又弹。
+# - QUIC 走 UDP，MITM 解密不了，先把三个域名的 QUIC 拒掉，App 会自动回落 TCP。
+# - 与你已有的闲鱼去广告模块（26 条）不冲突，可以叠加装；本模块只补开屏这一块。
+# - 装上后杀后台重进；如果今天已经缓存的那张还闪一次，清一下闲鱼缓存再进。
+
+[Rule]
+AND,((DOMAIN,acs.m.goofish.com),(PROTOCOL,QUIC)),REJECT
+AND,((DOMAIN,acs.m.taobao.com),(PROTOCOL,QUIC)),REJECT
+AND,((DOMAIN,guide-acs.m.taobao.com),(PROTOCOL,QUIC)),REJECT
+
+[URL Rewrite]
+^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/.* reject-200
+^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.async\.ads\/.* reject-200
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get reject-200
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads reject-200
+
+[MITM]
+hostname = %APPEND% acs.m.goofish.com, acs.m.taobao.com, guide-acs.m.taobao.com
