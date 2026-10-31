@@ -1,0 +1,19 @@
+#!name=京东开屏去广告
+#!desc=只拦京东 App 开屏广告；start 启动接口不能整个拦（会崩启动），原版靠 JQ 抠字段，Clash 跑不了 JQ，本模块用接口级拦截
+#!author=QiMonitor（规则来源：Thelongdarkorg、fmz200）
+#!category=去广告
+
+# 说明：
+# - 京东开屏有三条链路：ADX 实时竞价、物料下发、开屏大图，本模块三条全拦。
+# - start / welcomeHome 启动接口不能整个 reject（会崩启动），原版插件是靠 JQ 抠掉里面的开屏字段；
+#   JQ 在 Clash 里跑不了，所以这部分没法复制。如果装上后开屏还在，说明走的是 start 里的配置字段，
+#   到时发我 Clash Connections 里京东的请求域名，再钉死。
+# - 与之前给的京东全量链接不要叠装，二选一；这个只管开屏。
+
+[URL Rewrite]
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts reject-dict
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, m.360buyimg.com, bdsp-x.jd.com, dsp-x.jd.com
