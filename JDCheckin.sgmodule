@@ -1,5 +1,5 @@
 #!name=京东签到
-#!desc=京东每日 08:10 自动签到领京豆。Cookie 须在 Edge 手机网页版签到页 bean.m.jd.com/bean/signIndex.action 登录后抓取，不要用京东 App。
+#!desc=京东每日 08:10 自动签到领京豆。Cookie 在 Edge 手机网页版 home.m.jd.com/myJd/newhome.action 登录进“我的”页面后抓取，不要用京东 App。
 #!author=Qi
 
 [Script]
