@@ -12,10 +12,10 @@
 | `MeituanRemoveAds.sgmodule` | 美团 App、美团外卖 | 开屏接口、玲珑广告素材、品牌广告图、广告与统计域名。已实测可用 |
 | `XianyuSplashRemoveAds.sgmodule` | 闲鱼开屏 | 只拦冷启动开屏。新版闲鱼开屏接口走 `acs.m.goofish.com`，旧规则写 `acs.m.taobao.com` 会失效；另含每天 0 点后的素材预取接口。可与旧的闲鱼去广告模块叠加装 |
 | `JingdongSplashRemoveAds.sgmodule` | 京东开屏 | ADX 实时竞价开屏、物料下发接口、开屏大图（精确到开屏专用尺寸，不误伤商品图）。不要与京东全量模块叠装，二选一 |
-| `V2EXCheckin.sgmodule`（+ `checkin-v2ex.js` / `checkin-cookie.js`） | V2EX 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 v2ex.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
-| `NodeSeekCheckin.sgmodule`（+ `checkin-nodeseek.js` / `checkin-cookie.js`） | NodeSeek 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 nodeseek.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
-| `JDCheckin.sgmodule`（+ `checkin-jd.js` / `checkin-cookie-jd.js`） | 京东每日签到 | 每天 08:10 自动签到领京豆（可抵现），连签有加成。Cookie 须在 Edge 手机网页版 home.m.jd.com/myJd/newhome.action 登录进“我的”页面后抓取，不要用京东 App。网页 Cookie 约 31 天有效，失效通知会提示重抓。未实机验证，以首日 08:10 的通知为准 |
-| `SMZDMCheckin.sgmodule`（+ `checkin-smzdm.js` / `checkin-cookie-smzdm.js`） | 什么值得买每日签到 | 每天 08:10 自动签到领金币。安装后先在 Edge 登录 www.smzdm.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
+| `V2EXCheckin.sgmodule`（+ `checkin-v2ex.js` / `checkin-cookie-v2.js`） | V2EX 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 v2ex.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
+| `NodeSeekCheckin.sgmodule`（+ `checkin-nodeseek.js` / `checkin-cookie-v2.js`） | NodeSeek 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 nodeseek.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
+| `JDCheckin.sgmodule`（+ `checkin-jd.js` / `checkin-cookie-v2.js`） | 京东每日签到 | 每天 08:10 自动签到领京豆（可抵现），连签有加成。Cookie 须在 Edge 手机网页版 home.m.jd.com/myJd/newhome.action 登录进“我的”页面后抓取，不要用京东 App。网页 Cookie 约 31 天有效，失效通知会提示重抓。未实机验证，以首日 08:10 的通知为准 |
+| `SMZDMCheckin.sgmodule`（+ `checkin-smzdm.js` / `checkin-cookie-v2.js`） | 什么值得买每日签到 | 每天 08:10 自动签到领金币。安装后先在 Edge 登录 www.smzdm.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
 
 ## 安装方法
 
