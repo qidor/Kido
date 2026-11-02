@@ -12,8 +12,8 @@
   }
   var key = 'checkin_smzdm_cookie';
   var old = $persistentStore.read(key);
-  if (old !== cookie) {
-    $persistentStore.write(cookie, key);
+  $persistentStore.write(cookie, key);
+  if (!old) {
     $notification.post('什么值得买签到', '什么值得买 Cookie 已保存', '每天 08:10 会用它自动签到领金币');
   }
   $done({});
