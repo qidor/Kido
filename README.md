@@ -23,15 +23,43 @@
 
 ## 模块链接（复制后粘贴到 Clash 添加模块）
 
-`clash://` 跳转在部分手机/版本上点开没反应，改回复制粘贴最稳：复制下面对应链接，到 Clash 模块页“添加模块”的链接框里粘贴，点“添加”即可。
+`clash://` 跳转在部分手机/版本上点开没反应，改回复制粘贴最稳：点下面每个链接块右上角的复制按钮，到 Clash 模块页“添加模块”的链接框里粘贴，点“添加”即可。
 
-- 美团去广告：`https://raw.githubusercontent.com/qidor/Kido/main/MeituanRemoveAds.sgmodule`
-- 闲鱼开屏去广告：`https://raw.githubusercontent.com/qidor/Kido/main/XianyuSplashRemoveAds.sgmodule`
-- 京东开屏去广告：`https://raw.githubusercontent.com/qidor/Kido/main/JingdongSplashRemoveAds.sgmodule`
-- 向日葵去广告：`https://raw.githubusercontent.com/qidor/Kido/main/SunflowerRemoveAds.sgmodule`
-- V2EX 签到：`https://raw.githubusercontent.com/qidor/Kido/main/V2EXCheckin.sgmodule`
-- NodeSeek 签到：`https://raw.githubusercontent.com/qidor/Kido/main/NodeSeekCheckin.sgmodule`
+美团去广告
 
+```
+https://raw.githubusercontent.com/qidor/Kido/main/MeituanRemoveAds.sgmodule
+```
+
+闲鱼开屏去广告
+
+```
+https://raw.githubusercontent.com/qidor/Kido/main/XianyuSplashRemoveAds.sgmodule
+```
+
+京东开屏去广告
+
+```
+https://raw.githubusercontent.com/qidor/Kido/main/JingdongSplashRemoveAds.sgmodule
+```
+
+向日葵去广告
+
+```
+https://raw.githubusercontent.com/qidor/Kido/main/SunflowerRemoveAds.sgmodule
+```
+
+V2EX 签到
+
+```
+https://raw.githubusercontent.com/qidor/Kido/main/V2EXCheckin.sgmodule
+```
+
+NodeSeek 签到
+
+```
+https://raw.githubusercontent.com/qidor/Kido/main/NodeSeekCheckin.sgmodule
+```
 ## 论坛签到模块（V2EX / NodeSeek，各自独立）
 
 1. 两个模块分开装、分开开关，互不影响；之前合在一起的 `ForumCheckin.sgmodule` 已废弃，不要装它。
