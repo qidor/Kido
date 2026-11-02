@@ -44,6 +44,6 @@
 
 ## 京东 / 什么值得买签到
 
-- 京东：模块装好开启后，在手机 Edge 里（Clash 连接中）打开 home.m.jd.com/myJd/newhome.action，登录后进“我的”页面，收到「京东 Cookie 已保存」通知即可，之后每天 08:10 自动跑。不要用京东 App 抓取，App 内抓不到可用的网页 Cookie。旧版签到页 bean.m.jd.com/bean/signIndex.action 已废，打开即 JFE 52，不用管它。
+- 京东：模块装好开启后，在手机 Edge 里（Clash 连接中）打开 home.m.jd.com/myJd/newhome.action，登录后进“我的”页面，收到「京东 Cookie 已保存」通知即可，之后每天 08:10 自动跑。不要用京东 App 抓取，App 内抓不到可用的网页 Cookie。旧版签到页 bean.m.jd.com/bean/signIndex.action 已废，打开即 JFE 52，不用管它。如果手机网页版登录时总跳 App，改用 Edge 的“请求桌面版网站”打开 www.jd.com 登录，登录后任意京东页面都会触发抓取。
 - 什么值得买：模块装好开启后，在 Edge 里登录 www.smzdm.com 浏览一下，收到通知即可，之后每天 08:10 自动跑。
 - 两个模块的 Cookie 提醒和论坛签到一样：只有 Cookie 变了才弹一次，平时打开网站不再弹。
