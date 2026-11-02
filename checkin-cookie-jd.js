@@ -21,13 +21,8 @@
   }
   var key = 'checkin_jd_cookie';
   var old = $persistentStore.read(key);
-  var oldKey = '';
-  if (old) {
-    var om = old.match(/pt_key=([^;]+)/);
-    oldKey = om ? om[1] : '';
-  }
-  if (oldKey !== m[1]) {
-    $persistentStore.write(cookie, key);
+  $persistentStore.write(cookie, key);
+  if (!old) {
     $notification.post('京东签到', '京东 Cookie 已保存', '每天 08:10 会用它自动签到领京豆');
   }
   $done({});
