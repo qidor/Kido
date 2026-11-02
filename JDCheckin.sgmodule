@@ -4,9 +4,9 @@
 
 [Script]
 京东每日签到 = type=cron,cronexp="10 8 * * *",script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-jd.js,wake-system=true,timeout=60
-京东 Cookie获取（接口） = type=http-request,pattern=^https://(api\.m|me-api|ms\.jr)\.jd\.com/(client\.action\?functionId=signBean|user_new/info/GetJDUserInfoUnion),script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-jd.js,requires-body=false
-京东 Cookie获取（签到页） = type=http-request,pattern=^https://bean\.m\.jd\.com/bean/signIndex\.action,script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-jd.js,requires-body=false
-京东 Cookie获取（网页） = type=http-request,pattern=^https://(home\.m\.jd\.com|home\.jd\.com|www\.jd\.com|m\.jd\.com|plogin\.m\.jd\.com|passport\.jd\.com)/,script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-jd.js,requires-body=false
+京东 Cookie获取（接口） = type=http-request,pattern=^https://(api\.m|me-api|ms\.jr)\.jd\.com/(client\.action\?functionId=signBean|user_new/info/GetJDUserInfoUnion),script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-v2.js,requires-body=false
+京东 Cookie获取（签到页） = type=http-request,pattern=^https://bean\.m\.jd\.com/bean/signIndex\.action,script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-v2.js,requires-body=false
+京东 Cookie获取（网页） = type=http-request,pattern=^https://(home\.m\.jd\.com|home\.jd\.com|www\.jd\.com|m\.jd\.com|plogin\.m\.jd\.com|passport\.jd\.com)/,script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-v2.js,requires-body=false
 
 [MITM]
 hostname = %APPEND% api.m.jd.com, me-api.jd.com, ms.jr.jd.com, bean.m.jd.com, home.m.jd.com, home.jd.com, www.jd.com, m.jd.com, plogin.m.jd.com, passport.jd.com
