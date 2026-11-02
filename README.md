@@ -14,7 +14,7 @@
 | `JingdongSplashRemoveAds.sgmodule` | 京东开屏 | ADX 实时竞价开屏、物料下发接口、开屏大图（精确到开屏专用尺寸，不误伤商品图）。不要与京东全量模块叠装，二选一 |
 | `V2EXCheckin.sgmodule`（+ `checkin-v2ex.js` / `checkin-cookie.js`） | V2EX 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 v2ex.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
 | `NodeSeekCheckin.sgmodule`（+ `checkin-nodeseek.js` / `checkin-cookie.js`） | NodeSeek 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 nodeseek.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
-| `JDCheckin.sgmodule`（+ `checkin-jd.js` / `checkin-cookie-jd.js`） | 京东每日签到 | 每天 08:10 自动签到领京豆（可抵现），连签有加成。Cookie 须在 Edge 手机网页版 bean.m.jd.com 登录后抓取，不要用京东 App。网页 Cookie 约 31 天有效，失效通知会提示重抓。未实机验证，以首日 08:10 的通知为准 |
+| `JDCheckin.sgmodule`（+ `checkin-jd.js` / `checkin-cookie-jd.js`） | 京东每日签到 | 每天 08:10 自动签到领京豆（可抵现），连签有加成。Cookie 须在 Edge 手机网页版 bean.m.jd.com/bean/signIndex.action 登录后抓取，不要用京东 App。网页 Cookie 约 31 天有效，失效通知会提示重抓。未实机验证，以首日 08:10 的通知为准 |
 | `SMZDMCheckin.sgmodule`（+ `checkin-smzdm.js` / `checkin-cookie-smzdm.js`） | 什么值得买每日签到 | 每天 08:10 自动签到领金币。安装后先在 Edge 登录 www.smzdm.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
 
 ## 安装方法
@@ -44,6 +44,6 @@
 
 ## 京东 / 什么值得买签到
 
-- 京东：模块装好开启后，在手机 Edge 里（Clash 连接中）打开 bean.m.jd.com，登录并手动签到一次，收到「京东 Cookie 已保存」通知即可，之后每天 08:10 自动跑。不要用京东 App 抓取，App 内抓不到可用的网页 Cookie。
+- 京东：模块装好开启后，在手机 Edge 里（Clash 连接中）打开 bean.m.jd.com/bean/signIndex.action，登录并手动签到一次，收到「京东 Cookie 已保存」通知即可，之后每天 08:10 自动跑。不要用京东 App 抓取，App 内抓不到可用的网页 Cookie。
 - 什么值得买：模块装好开启后，在 Edge 里登录 www.smzdm.com 浏览一下，收到通知即可，之后每天 08:10 自动跑。
 - 两个模块的 Cookie 提醒和论坛签到一样：只有 Cookie 变了才弹一次，平时打开网站不再弹。
