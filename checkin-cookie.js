@@ -32,17 +32,9 @@
     $done({});
     return;
   }
-  function identityOf(c, v2ex) {
-    if (v2ex) {
-      var m = c.match(/A2=([^;]+)/);
-      return m ? m[1] : '';
-    }
-    return c.replace(/(^|;\s*)(__cf_bm|__cfruid|cf_clearance)=[^;]*/g, '').trim();
-  }
   var old = $persistentStore.read(key);
-  var oldIdentity = old ? identityOf(old, isV2ex) : '';
-  if (oldIdentity !== identityOf(cookie, isV2ex)) {
-    $persistentStore.write(cookie, key);
+  $persistentStore.write(cookie, key);
+  if (!old) {
     $notification.post('论坛签到', name + ' Cookie 已保存', '每天 08:10 会用它自动签到');
   }
   $done({});
