@@ -1,10 +1,11 @@
 #!name=京东签到
-#!desc=京东每日 08:10 自动签到领京豆。Cookie 须在 Edge 手机网页版 bean.m.jd.com 登录后抓取，不要用京东 App。
+#!desc=京东每日 08:10 自动签到领京豆。Cookie 须在 Edge 手机网页版签到页 bean.m.jd.com/bean/signIndex.action 登录后抓取，不要用京东 App。
 #!author=Qi
 
 [Script]
 京东每日签到 = type=cron,cronexp="10 8 * * *",script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-jd.js,wake-system=true,timeout=60
-京东 Cookie获取 = type=http-request,pattern=^https://api\.m\.jd\.com/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-jd.js,requires-body=false
+京东 Cookie获取（接口） = type=http-request,pattern=^https://(api\.m|me-api|ms\.jr)\.jd\.com/(client\.action\?functionId=signBean|user_new/info/GetJDUserInfoUnion),script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-jd.js,requires-body=false
+京东 Cookie获取（签到页） = type=http-request,pattern=^https://bean\.m\.jd\.com/bean/signIndex\.action,script-path=https://raw.githubusercontent.com/qidor/Kido/main/checkin-cookie-jd.js,requires-body=false
 
 [MITM]
-hostname = %APPEND% api.m.jd.com
+hostname = %APPEND% api.m.jd.com, me-api.jd.com, ms.jr.jd.com, bean.m.jd.com
