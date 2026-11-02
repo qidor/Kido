@@ -21,6 +21,17 @@
 2. 确认 HTTPS 解密已开启、证书已信任。
 3. 把对应 App 杀后台重进验证。
 
+## 一键导入（手机上点）
+
+在手机上点下面的链接，会直接跳到 Clash 里已经填好链接的“添加模块”页，点一下“添加”就装上了（官方文档：只打开填好链接的添加页，不会自动装完）。
+
+- 美团去广告：[一键导入 Clash](clash://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fqidor%2FKido%2Fmain%2FMeituanRemoveAds.sgmodule)
+- 闲鱼开屏去广告：[一键导入 Clash](clash://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fqidor%2FKido%2Fmain%2FXianyuSplashRemoveAds.sgmodule)
+- 京东开屏去广告：[一键导入 Clash](clash://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fqidor%2FKido%2Fmain%2FJingdongSplashRemoveAds.sgmodule)
+- 向日葵去广告：[一键导入 Clash](clash://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fqidor%2FKido%2Fmain%2FSunflowerRemoveAds.sgmodule)
+- V2EX 签到：[一键导入 Clash](clash://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fqidor%2FKido%2Fmain%2FV2EXCheckin.sgmodule)
+- NodeSeek 签到：[一键导入 Clash](clash://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fqidor%2FKido%2Fmain%2FNodeSeekCheckin.sgmodule)
+
 ## 论坛签到模块（V2EX / NodeSeek，各自独立）
 
 1. 两个模块分开装、分开开关，互不影响；之前合在一起的 `ForumCheckin.sgmodule` 已废弃，不要装它。
