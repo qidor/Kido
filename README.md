@@ -8,12 +8,12 @@
 
 | 模块 | 覆盖范围 | 说明 |
 |---|---|---|
-| `SunflowerRemoveAds.sgmodule`（+ `sunflower-remove-ads.js`） | 向日葵远程工具 | 自写 v1：用脚本清理接口 JSON 里的开屏、横幅、弹窗广告字段；解析失败原样放行。不是可莉原版精确规则，能否全去掉以实测为准。如广告还在，把 Clash Connections 里向日葵的请求域名发来再钉规则 |
-| `MeituanRemoveAds.sgmodule` | 美团 App、美团外卖 | 开屏接口、玲珑广告素材、品牌广告图、广告与统计域名。已实测可用 |
-| `XianyuSplashRemoveAds.sgmodule` | 闲鱼开屏 | 只拦冷启动开屏。新版闲鱼开屏接口走 `acs.m.goofish.com`，旧规则写 `acs.m.taobao.com` 会失效；另含每天 0 点后的素材预取接口。可与旧的闲鱼去广告模块叠加装 |
-| `JingdongSplashRemoveAds.sgmodule` | 京东开屏 | ADX 实时竞价开屏、物料下发接口、开屏大图（精确到开屏专用尺寸，不误伤商品图）。不要与京东全量模块叠装，二选一 |
-| `V2EXCheckin.sgmodule`（+ `checkin-v2ex.js` / `checkin-cookie.js`） | V2EX 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 v2ex.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
-| `NodeSeekCheckin.sgmodule`（+ `checkin-nodeseek.js` / `checkin-cookie.js`） | NodeSeek 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 nodeseek.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
+| `SunflowerRemoveAds.sgmodule`<br>https://raw.githubusercontent.com/qidor/Kido/main/SunflowerRemoveAds.sgmodule（+ `sunflower-remove-ads.js`） | 向日葵远程工具 | 自写 v1：用脚本清理接口 JSON 里的开屏、横幅、弹窗广告字段；解析失败原样放行。不是可莉原版精确规则，能否全去掉以实测为准。如广告还在，把 Clash Connections 里向日葵的请求域名发来再钉规则 |
+| `MeituanRemoveAds.sgmodule`<br>https://raw.githubusercontent.com/qidor/Kido/main/MeituanRemoveAds.sgmodule | 美团 App、美团外卖 | 开屏接口、玲珑广告素材、品牌广告图、广告与统计域名。已实测可用 |
+| `XianyuSplashRemoveAds.sgmodule`<br>https://raw.githubusercontent.com/qidor/Kido/main/XianyuSplashRemoveAds.sgmodule | 闲鱼开屏 | 只拦冷启动开屏。新版闲鱼开屏接口走 `acs.m.goofish.com`，旧规则写 `acs.m.taobao.com` 会失效；另含每天 0 点后的素材预取接口。可与旧的闲鱼去广告模块叠加装 |
+| `JingdongSplashRemoveAds.sgmodule`<br>https://raw.githubusercontent.com/qidor/Kido/main/JingdongSplashRemoveAds.sgmodule | 京东开屏 | ADX 实时竞价开屏、物料下发接口、开屏大图（精确到开屏专用尺寸，不误伤商品图）。不要与京东全量模块叠装，二选一 |
+| `V2EXCheckin.sgmodule`<br>https://raw.githubusercontent.com/qidor/Kido/main/V2EXCheckin.sgmodule（+ `checkin-v2ex.js` / `checkin-cookie.js`） | V2EX 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 v2ex.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
+| `NodeSeekCheckin.sgmodule`<br>https://raw.githubusercontent.com/qidor/Kido/main/NodeSeekCheckin.sgmodule（+ `checkin-nodeseek.js` / `checkin-cookie.js`） | NodeSeek 每日签到 | 每天 08:10 自动签到（仅 Clash 打开并连接时才跑）。安装后先在浏览器登录态下打开一次 nodeseek.com 抓取 Cookie，Cookie 只存本机。未实机验证，以首日 08:10 的通知为准 |
 
 ## 安装方法
 
@@ -21,45 +21,6 @@
 2. 确认 HTTPS 解密已开启、证书已信任。
 3. 把对应 App 杀后台重进验证。
 
-## 模块链接（复制后粘贴到 Clash 添加模块）
-
-`clash://` 跳转在部分手机/版本上点开没反应，改回复制粘贴最稳：点下面每个链接块右上角的复制按钮，到 Clash 模块页“添加模块”的链接框里粘贴，点“添加”即可。
-
-美团去广告
-
-```
-https://raw.githubusercontent.com/qidor/Kido/main/MeituanRemoveAds.sgmodule
-```
-
-闲鱼开屏去广告
-
-```
-https://raw.githubusercontent.com/qidor/Kido/main/XianyuSplashRemoveAds.sgmodule
-```
-
-京东开屏去广告
-
-```
-https://raw.githubusercontent.com/qidor/Kido/main/JingdongSplashRemoveAds.sgmodule
-```
-
-向日葵去广告
-
-```
-https://raw.githubusercontent.com/qidor/Kido/main/SunflowerRemoveAds.sgmodule
-```
-
-V2EX 签到
-
-```
-https://raw.githubusercontent.com/qidor/Kido/main/V2EXCheckin.sgmodule
-```
-
-NodeSeek 签到
-
-```
-https://raw.githubusercontent.com/qidor/Kido/main/NodeSeekCheckin.sgmodule
-```
 ## 论坛签到模块（V2EX / NodeSeek，各自独立）
 
 1. 两个模块分开装、分开开关，互不影响；之前合在一起的 `ForumCheckin.sgmodule` 已废弃，不要装它。
