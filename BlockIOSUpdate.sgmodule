@@ -1,0 +1,22 @@
+#!name=iOS 屏蔽系统更新
+#!desc=拦截 iOS 系统更新检测与下载域名，阻止 iPhone 在 Clash 连接时检查、下载新系统；纯规则，无需 MITM，不影响 App Store 应用下载与正常上网，关闭模块即恢复
+#!author=QiMonitor
+#!category=工具
+
+# 说明：
+# - 只含规则，不需要 MITM、不改任何 App 数据，装上开启即生效。
+# - 核心三条：mesu.apple.com（托管软件更新目录）、gdmf.apple.com（可更新版本查询，iOS 14+ 生效）、appldnld.apple.com（固件下载）；其余为辅助检测与下载 CDN。
+# - 只在 Clash 打开并连接时生效；Clash 关掉后系统仍可检查更新。想连 Clash 关掉也屏蔽，需另走 tvOS 描述文件（系统级，不在本模块内）。
+# - 若 27.2 的安装包已经下载到手机里，先去 设置 → 通用 → iPhone 储存空间 里删掉它，否则红点提示还在。
+# - 万一 App Store 应用下载异常，先关掉本模块再试；仍有更新提示冒出来时，把 Clash Connections 里当时的 apple.com 请求域名发来再钉规则。
+
+[Rule]
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
+DOMAIN,gdmf-ados.apple.com,REJECT
+DOMAIN,appldnld.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,updates.cdn-apple.com,REJECT
+DOMAIN,gg.apple.com,REJECT
+DOMAIN,ns.itunes.apple.com,REJECT
